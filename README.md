@@ -70,16 +70,6 @@ PlotJuggler:
 
 ---
 
-### 🛠 Troubleshooting
-
-- **PlotJuggler crashes or shows nothing** → Make sure:
-  - You selected `json` as protocol (not `data_tamer`)
-  - You clicked **Connect before running the publisher**
-  - Your JSON is valid (`{"altitude": 12.3}` not `altitude: 12.3`)
-- **Still nothing?** Add `std::this_thread::sleep_for(std::chrono::seconds(3));` at the beginning of `main()` to give PlotJuggler time to connect
-
----
-
 ### ✨ Want to send more variables?
 
 Just expand the JSON object:
@@ -90,6 +80,3 @@ j["velocity"] = velocity;
 j["throttle"] = throttle;
 ```
 
----
-
-Let me know if you'd like a `CMakeLists.txt` as well or a pre-packaged `.zip` project folder!
